@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "C12_backend": {
+      "main": "src/C12_backend/main.mo",
+      "type": "motoko"
+    },
+    "C12_frontend": {
+      "dependencies": [
+        "C12_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/C12_frontend/src/index.html"
+      },
+      "source": [
+        "src/C12_frontend/assets",
+        "dist/C12_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
